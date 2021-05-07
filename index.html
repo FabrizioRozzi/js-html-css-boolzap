@@ -10,9 +10,6 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="app">
-    
-  </div>
   <div class="container" id="app">
     <aside class="left">
       <div class="top">
@@ -48,8 +45,10 @@
       <div class="cerca-chat">
         <i class="fas fa-search"></i>
         <input type="text" placeholder="                        Cerca o inizia una nuova chat">
+        
         <div v-for="contact in contacts" class="contact">
-          {{contact}}
+          <img src="getImage('contact.avatar')" alt="">
+          {{contact.name}}
         </div>
       </div>
     </aside>
