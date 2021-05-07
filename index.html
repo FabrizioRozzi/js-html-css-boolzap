@@ -47,7 +47,7 @@
         <input type="text" placeholder="                        Cerca o inizia una nuova chat">
         
         <div v-for="contact in contacts" class="contact">
-          <img src="getImage('contact.avatar')" alt="">
+          <img src="getImage(contact.avatar)" alt="">
           {{contact.name}}
         </div>
       </div>
