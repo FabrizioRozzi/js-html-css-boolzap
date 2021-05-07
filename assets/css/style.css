@@ -1,0 +1,61 @@
+
+/* MACRO CONTAINER */
+
+body{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: 
+  linear-gradient(to bottom,
+    #009688 0px,
+    #009688 15vh,
+    #D9DBD6 15vh,
+    #D9DBD6 100vh);
+}
+
+.container{
+  width: 60%;
+  height: 90vh;
+  margin: 20px auto;
+  background-color: black;
+}
+
+.container .left{
+  float: left;
+  width: 25%;
+  height: 100%;
+  background-color: bisque;
+}
+
+.container .right{
+  float: left;
+  width: 75%;
+  height: 100%;
+  background-color: white;
+}
+
+.avatar{
+  height: 70px;
+  border-radius: 50%;
+}
+
+li{
+  list-style: none;
+  display: inline;
+}
+
+
+/* PARTE LEFT */
+.left .top{
+  display: flex;
+  align-items: center;
+  height: 120px;
+  background-color: #EAEAEA;
+  border-right: 1px solid #DADADA;
+}
+
+.left .top .avatar{
+  padding: 20px 0;
+}
+
+.left .top 
