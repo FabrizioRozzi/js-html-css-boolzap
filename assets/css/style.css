@@ -43,6 +43,11 @@ li{
   display: inline;
 }
 
+.icons li i{
+  padding: 0 20px;
+  color: grey;
+}
+
 i{
   font-size:x-large;
 }
@@ -68,10 +73,7 @@ i{
   padding: 20px 0;
 }
 
-.left .top .icons li i{
-  padding: 0 20px;
-  color: grey;
-}
+
 
 
 
@@ -123,6 +125,7 @@ i{
   height: 30px;
   margin-left: 5%;
   margin-top: 10px;
+  border-color: lightgray;
 }
 
 
@@ -131,18 +134,65 @@ i{
 
 /* header */
 .right .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 120px;
   width: 100%;
   background-color: #EAEAEA;
 }
 
+
+/* section */
 .right section{
   height: calc(100% - 240px);
   background-image: url(../image/mine.jpg);
 }
 
+.right section .row {
+  height: 100px;
+  width: 100%;
+}
+
+.right section .row:first-child{
+  padding-top: 50px ;
+}
+
+.right section .row .inviato,
+.right section .row .ricevuto{
+  height: 100%;
+  max-width: 50%;
+  min-width: 40%;
+  margin: 10px 100px;
+  border-radius: 15px;
+}
+
+.right section .row .inviato{
+  float: right;
+  background-color: #D5F9BA;
+}
+
+.right section .row .ricevuto{
+  float: left;
+  background-color: #FFFFFF;
+}
+
+
+
+/* footer */
 .right .footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 120px;
   width: 100%;
   background-color: #F3EEEA;
+}
+
+.right .footer input{
+  width: 70%;
+  height: 80px;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
 }
