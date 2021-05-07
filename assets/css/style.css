@@ -102,25 +102,29 @@ i{
   color: #8EDBFC;
 }
 
-.left .notifiche a{
+.left .notifiche .attiva-notifiche{
+  padding-left: 30px ;
+}
+
+.left .notifiche .attiva-notifiche a{
   color: black;
 }
 
 /* chat */
-.left .chat{
+.left .cerca-chat{
   position: relative;
   height: calc(100% - 250px);
   background-color: #FEFEFE;
 }
 
-.left .chat i{
+.left .cerca-chat i{
   position: absolute;
   left: 50px;
   top: 15px;
   color: #D9DBD6;
 }
 
-.left .chat input{
+.left .cerca-chat input{
   width: 89%;
   height: 30px;
   margin-left: 5%;

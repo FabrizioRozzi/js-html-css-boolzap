@@ -10,7 +10,10 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <div id="app">
+    
+  </div>
+  <div class="container" id="app">
     <aside class="left">
       <div class="top">
         <ul>
@@ -42,10 +45,12 @@
           <a href="#">Attiva notifiche desktop</a>
         </div>
       </div>
-      <div class="chat">
+      <div class="cerca-chat">
         <i class="fas fa-search"></i>
         <input type="text" placeholder="                        Cerca o inizia una nuova chat">
-        
+        <div v-for="contact in contacts" class="contact">
+          {{contact}}
+        </div>
       </div>
     </aside>
     <main class="right">
