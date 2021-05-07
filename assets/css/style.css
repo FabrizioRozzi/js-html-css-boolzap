@@ -33,7 +33,7 @@ body{
   background-color: black;
 }
 
-.avatar{
+img{
   height: 70px;
   border-radius: 50%;
 }
@@ -130,6 +130,16 @@ i{
   margin-left: 5%;
   margin-top: 10px;
   border-color: lightgray;
+}
+
+.left .cerca-chat .contact{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.left .cerca-chat .contact h3{
+  margin-left: 10px;
 }
 
 

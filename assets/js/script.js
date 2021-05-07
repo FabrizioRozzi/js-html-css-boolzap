@@ -88,9 +88,9 @@ const app = new Vue({
     ],
     
   },
-  method : {
-    getImage(avatar) {
-      return `./assets/image/avatar/${avatar}`
+  methods : {
+    getImage(image) {
+      return `./assets/image/avatar${image}.jpg`
     }
   }
 })
