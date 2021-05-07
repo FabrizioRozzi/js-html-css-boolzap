@@ -30,7 +30,7 @@ body{
   float: left;
   width: 75%;
   height: 100%;
-  background-color: black;
+  background-color: white;
 }
 
 img{
@@ -160,6 +160,7 @@ i{
 /* section */
 .right section{
   height: calc(100% - 240px);
+  width: 98%;
   background-image: url(../image/mine.jpg);
 }
 
