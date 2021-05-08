@@ -52,6 +52,10 @@ i{
   font-size:x-large;
 }
 
+.active{
+  background-color: lightgray;
+}
+
 
 /* PARTE LEFT */
 
@@ -136,6 +140,11 @@ i{
   display: flex;
   align-items: center;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.left .cerca-chat .contact:hover{
+  background-color: lightgray;
 }
 
 .left .cerca-chat .contact h3{
@@ -154,6 +163,12 @@ i{
   height: 120px;
   width: 100%;
   background-color: #EAEAEA;
+}
+
+.right .header .chat-active{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
 
@@ -175,6 +190,7 @@ i{
 
 .right section .row .inviato,
 .right section .row .ricevuto{
+  position: relative;
   height: 100%;
   max-width: 50%;
   min-width: 40%;
@@ -185,6 +201,18 @@ i{
 .right section .row .inviato{
   float: right;
   background-color: #D5F9BA;
+}
+
+.right section .row .inviato p,
+.right section .row .ricevuto p{
+  padding-left: 3%;
+}
+
+.right section .row .inviato span,
+.right section .row .ricevuto span{
+  position: absolute;
+  right: 100px;
+  bottom: 10px;
 }
 
 .right section .row .ricevuto{
