@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container" id="app">
+    <aside class="left">
+      <div class="top">
+        <ul>
+          <li>
+            <img class="avatar" :src="getImage(user.avatar)" alt="">
+          </li>
+          <li>
+            {{user.name}}
+          </li>
+        </ul>    
+        <ul class="icons">
+          <li>
+            <i class="fas fa-circle-notch"></i>
+          </li>
+          <li>
+            <i class="fas fa-comment-alt"></i>
+          </li>
+          <li>
+            <i class="fas fa-ellipsis-v"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="notifiche">
+        <div class="campana">
+          <i class="fas fa-bell-slash"></i>
+        </div>
+        <div>
+          <h3>Ricevi notifiche dei nuovi messaggi</h3>
+          <a href="#">Attiva notifiche desktop</a>
+        </div>
+      </div>
+      <div class="cerca-chat">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="                        Cerca o inizia una nuova chat">
+        
+        <div 
+          v-for="(contact, index) in contacts" 
+          @click="activeIndex = index"
+          :class="index === activeIndex ? 'active' : ' '"
+          class="contact"
+        >
+
+          <img :src="getImage(contact.avatar)" alt="">
+          <h3>{{contact.name}}</h3>
+        </div>
+      </div>
+    </aside>
+    <main class="right">
+      <div class="header">
+        <div class="chat-active">
+          <img :src="getImage(contacts[activeIndex].avatar)" alt="">
+          <h3>{{contacts[activeIndex].name}}</h3>
+        </div>
+        <ul class="icons">
+          <li>
+            <i class="fas fa-search"></i>
+          </li>
+          <li>
+            <i class="fas fa-paperclip"></i>
+          </li>
+          <li>
+            <i class="fas fa-ellipsis-v"></i>
+          </li>
+        </ul>
+      </div>
+      <section>
+        <div class="row">
+          <div 
+          v-for="message in contacts[activeIndex].messages"
+          :class="message.status==='sent' ? 'ricevuto' : 'inviato'"
+          >
+            <p>
+              {{message.text}}
+            </p>
+            <span>
+              {{message.date}}
+            </span>
+          </div>
+        </div>
+      </section>
+      <div class="footer">
+        <i class="far fa-smile"></i>
+        <input 
+        type="text" 
+        @keyup.13="sendMsg"
+        placeholder="Scrivi un messaggio"
+        v-model='msgInviato'
+        >
+        <i class="fas fa-microphone"></i>
+      </div>
+    </main>
+  </div>
+  
+  
+
+
+
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

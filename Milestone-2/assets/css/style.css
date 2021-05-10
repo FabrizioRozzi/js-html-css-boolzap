@@ -119,6 +119,7 @@ i{
   position: relative;
   height: calc(100% - 250px);
   background-color: #FEFEFE;
+  overflow-y: auto;
 }
 
 .left .cerca-chat i{
@@ -141,6 +142,7 @@ i{
   align-items: center;
   margin-top: 20px;
   cursor: pointer;
+  
 }
 
 .left .cerca-chat .contact:hover{
@@ -177,6 +179,7 @@ i{
   height: calc(100% - 240px);
   width: 98%;
   background-image: url(../image/mine.jpg);
+  overflow-y: auto;
 }
 
 .right section .row {
@@ -206,12 +209,13 @@ i{
 .right section .row .inviato p,
 .right section .row .ricevuto p{
   padding-left: 3%;
+  font-size: 25px;
 }
 
 .right section .row .inviato span,
 .right section .row .ricevuto span{
   position: absolute;
-  right: 100px;
+  right: 10px;
   bottom: 10px;
 }
 
@@ -234,8 +238,8 @@ i{
 
 .right .footer input{
   width: 70%;
-  height: 80px;
+  height: 50px;
   border: none;
   border-radius: 5px;
-  font-size: 30px;
+  font-size: 20px;
 }

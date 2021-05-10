@@ -15,10 +15,10 @@
       <div class="top">
         <ul>
           <li>
-            <img class="avatar" src="assets/image/avatar_io.jpg" alt="">
+            <img class="avatar" :src="getImage(user.avatar)" alt="">
           </li>
           <li>
-            Nome Utente
+            {{user.name}}
           </li>
         </ul>    
         <ul class="icons">
@@ -48,6 +48,7 @@
         
         <div 
           v-for="(contact, index) in contacts" 
+          @click="activeIndex = index"
           :class="index === activeIndex ? 'active' : ' '"
           class="contact"
         >
@@ -77,26 +78,26 @@
       </div>
       <section>
         <div class="row">
-          <div class="inviato">
-            <p 
-              v-if="(contacts[activeIndex].messages).status === 'sent'? '{{contacts[activeIndex].messages.text}}' : ''"
-            >
-              
+          <div 
+          v-for="message in contacts[activeIndex].messages"
+          :class="message.status==='sent' ? 'ricevuto' : 'inviato'"
+          >
+            <p>
+              {{message.text}}
             </p>
-            <span>data:</span>
+            <span>
+              {{message.date}}
+            </span>
           </div>
         </div>
-        <div class="row">
-          <div class="ricevuto">
-            <p><strong>testo messaggio</strong></p>
-            <span>data:</span>
-          </div>
-        </div>
-        
       </section>
       <div class="footer">
         <i class="far fa-smile"></i>
-        <input type="text" placeholder="     Scrivi un messaggio">
+        <input 
+        type="text" 
+        placeholder="Scrivi un messaggio"
+        v-model='msgInviato'
+        >
         <i class="fas fa-microphone"></i>
       </div>
     </main>
