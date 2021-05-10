@@ -100,13 +100,18 @@ const app = new Vue({
 
     sendMsg(){
      // console.log(this.msgInviato);
-      this.contacts.forEach(contact => {
-        contact[this.activeIndex].messages.push({
-         date:'fefe',
-         text:this.msgInviato,
-         status:'received'
-       })
-     });
+      this.contacts[this.activeIndex].messages.push({
+        date:dayjs().format('DD/MMM/YYYY HH:mm'),
+        text:this.msgInviato,
+        status:'received'
+      });
+      setTimeout(()=>{
+        this.contacts[this.activeIndex].messages.push({
+          date:dayjs().format('DD/MMM/YYYY HH:mm'),
+          text:"ok...",
+          status:'sent'
+        });
+      },1000)
     }
     
   }
