@@ -44,13 +44,14 @@
       </div>
       <div class="cerca-chat">
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="                        Cerca o inizia una nuova chat">
+        <input type="text" v-model="ricerca" placeholder="                        Cerca o inizia una nuova chat">
         
         <div 
           v-for="(contact, index) in contacts" 
           @click="activeIndex = index"
           :class="index === activeIndex ? 'active' : ' '"
           class="contact"
+          v-if="contact.name.includes(ricerca)"
         >
 
           <img :src="getImage(contact.avatar)" alt="">

@@ -1,0 +1,245 @@
+
+/* MACRO CONTAINER */
+
+body{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: 
+  linear-gradient(to bottom,
+    #009688 0px,
+    #009688 15vh,
+    #D9DBD6 15vh,
+    #D9DBD6 100vh);
+}
+
+.container{
+  width: 60%;
+  height: 90vh;
+  margin: 20px auto;
+}
+
+.container .left{
+  float: left;
+  width: 25%;
+  height: 100%;
+  
+}
+
+.container .right{
+  float: left;
+  width: 75%;
+  height: 100%;
+  background-color: white;
+}
+
+img{
+  height: 70px;
+  border-radius: 50%;
+}
+
+li{
+  list-style: none;
+  display: inline;
+}
+
+.icons li i{
+  padding: 0 20px;
+  color: grey;
+}
+
+i{
+  font-size:x-large;
+}
+
+.active{
+  background-color: lightgray;
+}
+
+
+/* PARTE LEFT */
+
+/* top */
+.left .top{
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  background-color: #EAEAEA;
+  border-right: 1px solid #DADADA;
+}
+
+.left .top ul{
+  display: flex;
+  align-items: center;
+}
+
+.left .top .avatar{
+  padding: 20px 0;
+}
+
+
+
+
+
+/* notifiche */
+.left .notifiche{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  height: 130px;
+  background-color: #8EDBFC;
+}
+
+.left .notifiche .campana{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.left .notifiche .campana i{
+  color: #8EDBFC;
+}
+
+.left .notifiche .attiva-notifiche{
+  padding-left: 30px ;
+}
+
+.left .notifiche .attiva-notifiche a{
+  color: black;
+}
+
+/* chat */
+.left .cerca-chat{
+  position: relative;
+  height: calc(100% - 250px);
+  background-color: #FEFEFE;
+  overflow-y: auto;
+}
+
+.left .cerca-chat i{
+  position: absolute;
+  left: 50px;
+  top: 15px;
+  color: #D9DBD6;
+}
+
+.left .cerca-chat input{
+  width: 89%;
+  height: 30px;
+  margin-left: 5%;
+  margin-top: 10px;
+  border-color: lightgray;
+}
+
+.left .cerca-chat .contact{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  
+}
+
+.left .cerca-chat .contact:hover{
+  background-color: lightgray;
+}
+
+.left .cerca-chat .contact h3{
+  margin-left: 10px;
+}
+
+
+
+/* PARTE RIGHT */
+
+/* header */
+.right .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+
+.right .header .chat-active{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+
+/* section */
+.right section{
+  height: calc(100% - 240px);
+  width: 98%;
+  background-image: url(../image/mine.jpg);
+  overflow-y: auto;
+}
+
+.right section .row {
+  height: 100px;
+  width: 100%;
+}
+
+.right section .row:first-child{
+  padding-top: 50px ;
+}
+
+.right section .row .inviato,
+.right section .row .ricevuto{
+  position: relative;
+  height: 100%;
+  max-width: 50%;
+  min-width: 40%;
+  margin: 10px 100px;
+  border-radius: 15px;
+}
+
+.right section .row .inviato{
+  float: right;
+  background-color: #D5F9BA;
+}
+
+.right section .row .inviato p,
+.right section .row .ricevuto p{
+  padding-left: 3%;
+  font-size: 25px;
+}
+
+.right section .row .inviato span,
+.right section .row .ricevuto span{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.right section .row .ricevuto{
+  float: left;
+  background-color: #FFFFFF;
+}
+
+
+
+/* footer */
+.right .footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  background-color: #F3EEEA;
+}
+
+.right .footer input{
+  width: 70%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}

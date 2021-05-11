@@ -90,7 +90,7 @@ const app = new Vue({
         ],
       },
     ],
-    
+    ricerca : "", 
     activeIndex : 0,
     msgInviato : ""
   },
