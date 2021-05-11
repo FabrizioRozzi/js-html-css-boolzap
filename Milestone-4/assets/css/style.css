@@ -183,6 +183,7 @@ i{
 }
 
 .right section .row {
+  
   height: 100px;
   width: 100%;
 }
@@ -210,6 +211,12 @@ i{
 .right section .row .ricevuto p{
   padding-left: 3%;
   font-size: 25px;
+}
+
+.right section .row i{
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
 }
 
 .right section .row .inviato span,
