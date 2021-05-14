@@ -51,7 +51,7 @@
           @click="activeIndex = index"
           :class="index === activeIndex ? 'active' : ' '"
           class="contact"
-          v-if="contact.name.includes(ricerca)"
+          v-if="contact.name.toLowerCase().includes(ricerca)"
         >
 
           <img :src="getImage(contact.avatar)" alt="">
